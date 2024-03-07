@@ -33,7 +33,14 @@
                         <tr>
                             <td>{{$item->id}}</td>
                             <td>{{$item->name}}</td>
-                            <td>{{$item->roles[0]->name}}</td>
+                            <td>
+                                @if($item->roles->isNotEmpty())
+                                    {{$item->roles[0]->name}}
+                                @else
+                                    No Role Assigned
+                                @endif
+                            </td>
+
                             <td>
                                 <span class="badge bg-success">Active</span>
                             </td>
