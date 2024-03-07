@@ -26,6 +26,8 @@
                             <th>Name</th>
                             <th>Role</th>
                             <th>Status</th>
+                            <th>Action</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -47,6 +49,11 @@
                                     {{ $item->status ? 'Enabled' : 'Disabled' }}
                                 </a>
 
+
+                            </td>
+                            <td>
+                                <a href="" class="btn btn-primary">Update</a>
+                                <a href="" class="btn btn-danger">delete</a>
 
                             </td>
                         </tr>
