@@ -109,15 +109,22 @@
 
 
                         </li>
-                        <li
-                class="sidebar-item ">
-                <a href="/user" class='sidebar-link'>
-                    <i class="bi bi-grid-fill"></i>
-                    <span>User</span>
-                </a>
+                         <li class="sidebar-item ">
+                                <a href="/user" class='sidebar-link'>
+                                    <i class="bi bi-grid-fill"></i>
+                                    <span>User</span>
+                                </a>
 
 
-            </li>
+                          </li>
+                          <li class="sidebar-item ">
+                            <a href="/category" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Category</span>
+                            </a>
+
+
+                      </li>
 
                         <ul class="submenu ">
 

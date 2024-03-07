@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CategoryController;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +42,10 @@ Route::get('/user', [UserController::class, 'users']);
 // check status user
 
 Route::get('user/{id}', [UserController::class, 'checkStatus']);
+
+// categories table
+Route::get('/category', [CategoryController::class, 'category']);
+
 
 
 
