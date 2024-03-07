@@ -20,7 +20,7 @@ use App\Http\Controllers\CategoryController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('user.index');
 });
 
 Route::get('/admin', function () {
