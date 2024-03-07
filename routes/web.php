@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,23 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/admin', function () {
+    return view('admin.index');
+});
+
+Route::get('/signIn', [AuthController::class, 'login']);
+Route::get('/signUp', [AuthController::class, 'register']);
+
+//authentication
+
+Route::post('/login', [AuthController::class, 'loginUser']);
+Route::post('/register', [AuthController::class, 'registerUser']);
+
+//user
+
+Route::get('/user', [UserController::class, 'users']);
+
+
+
+
