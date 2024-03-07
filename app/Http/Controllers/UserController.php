@@ -19,4 +19,25 @@ class UserController extends Controller
         return view('admin.user', compact('data', 'role'));
 
     }
+
+    public function checkStatus($id)
+{
+    $user = User::find($id);
+    if($user)
+    {
+        if($user->status)
+        {
+            $user->status = '0';
+        }
+        else
+        {
+            $user->status = '1';
+
+      }
+      $user->save();
+
+}
+return back();
+}
+
 }

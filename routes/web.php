@@ -35,6 +35,11 @@ Route::post('/register', [AuthController::class, 'registerUser']);
 
 Route::get('/user', [UserController::class, 'users']);
 
+// check status user
+
+Route::get('user/{id}', [UserController::class, 'checkStatus']);
+
+
 
 
 

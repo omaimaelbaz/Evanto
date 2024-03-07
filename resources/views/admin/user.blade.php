@@ -43,23 +43,16 @@
 
                             <td>
                                 {{-- <span class="badge bg-success">Active</span> --}}
-                                <a href="/user" class="btn btn-{{$item->status  ? 'success' : 'danger'}}"
-                                    {{$item->status ? 'Enable' : 'Desable'}}>
+                                <a href="user/{{ $item->id }}" class="btn btn-{{ $item->status ? 'success' : 'danger' }}">
+                                    {{ $item->status ? 'Enabled' : 'Disabled' }}
                                 </a>
+
 
                             </td>
                         </tr>
 
                         @endforeach
 
-                        <tr>
-                            <td>Carter</td>
-                            <td>urna.justo.faucibus@orci.com</td>
-                            <td>Biez</td>
-                            <td>
-                                <span class="badge bg-success">Active</span>
-                            </td>
-                        </tr>
 
                     </tbody>
                 </table>
