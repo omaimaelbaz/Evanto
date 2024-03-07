@@ -42,7 +42,11 @@
                             </td>
 
                             <td>
-                                <span class="badge bg-success">Active</span>
+                                {{-- <span class="badge bg-success">Active</span> --}}
+                                <a href="/user" class="btn btn-{{$item->status  ? 'success' : 'danger'}}"
+                                    {{$item->status ? 'Enable' : 'Desable'}}>
+                                </a>
+
                             </td>
                         </tr>
 
