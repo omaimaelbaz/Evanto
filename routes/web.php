@@ -50,6 +50,8 @@ Route::get('/category', [CategoryController::class, 'category']);
 // organizateur
 
 Route::get('/organizateur', [ OrganizateurController::class, 'organizateur']);
+Route::get('/event', [ OrganizateurController::class, 'aficherevent']);
+
 
 
 

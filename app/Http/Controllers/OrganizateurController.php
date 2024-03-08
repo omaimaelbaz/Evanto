@@ -10,4 +10,8 @@ class OrganizateurController extends Controller
     {
         return view('organizateur.index');
     }
+    public function aficherevent()
+    {
+        return view('organizateur.event');
+    }
 }
