@@ -40,6 +40,11 @@ Route::post('/register', [AuthController::class, 'registerUser']);
 //user
 
 Route::get('/user', [UserController::class, 'users']);
+Route::get('/details', [UserController::class, 'aficherdetails']);
+
+
+
+
 
 // check status user
 

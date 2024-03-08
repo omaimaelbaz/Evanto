@@ -6,6 +6,8 @@ use App\Models\Event;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Role;
+use App\Models\Category;
+
 
 class UserController extends Controller
 {
@@ -14,6 +16,12 @@ class UserController extends Controller
         $events = Event::all();
         return view('user.index',compact('events'));
 
+    }
+    public function aficherdetails()
+    {
+        $events = Event::with('category')->get();
+
+        return view('user.details', compact('events' ));
     }
     public function users()
     {

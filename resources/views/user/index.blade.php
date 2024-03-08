@@ -146,7 +146,7 @@
                 <div class="speaker">
                   <img src="img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
                   <div class="details">
-                    <h3><a href="speaker-details.html">{{$event->title}}</a></h3>
+                    <h3><a href="/details">{{$event->title}}</a></h3>
                     <p>{{$event->description}}</p>
                     <div class="social">
                       <a href=""><i class="fa fa-twitter"></i></a>
