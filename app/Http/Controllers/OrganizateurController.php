@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Event;
+use App\Models\Category;
+
 
 class OrganizateurController extends Controller
 {
@@ -10,8 +13,13 @@ class OrganizateurController extends Controller
     {
         return view('organizateur.index');
     }
+
     public function aficherevent()
-    {
-        return view('organizateur.event');
-    }
+{
+    $events = Event::all();
+    $categories = Category::all();
+
+    return view('organizateur.event', compact('events', 'categories'));
+}
+
 }

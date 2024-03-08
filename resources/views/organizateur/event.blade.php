@@ -1,4 +1,4 @@
-@extends('organizatur.layouts')
+@extends('organizateur.layouts')
 @section('content')
 <div class="page-heading">
     <div class="page-title">
@@ -34,21 +34,24 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($data as $item )
+                        @foreach ($events as $item)
                         <tr>
                             <td>{{$item->id}}</td>
-                            <td>{{$item->name}}</td>
+                            <td>{{$item->title}}</td>
+                            <td>{{$item->description}}</td>
+                            <td>{{$item->date}}</td>
+                            <td>{{$item->location}}</td>
+                            <td>{{$item->category->name}}</td>
+                            <td>{{$item->available_seats}}</td>
                             <td>
                                 <a href="" class="btn btn-primary">Update</a>
                                 <a href="" class="btn btn-danger">delete</a>
-
                             </td>
                         </tr>
-
                         @endforeach
-
-
                     </tbody>
+
+
                 </table>
             </div>
         </div>
