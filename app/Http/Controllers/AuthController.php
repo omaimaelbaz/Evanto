@@ -44,6 +44,9 @@ class AuthController extends Controller
         if(auth()->user()->roles->first()->name == 'admin'){
             return redirect('/admin');
         }
+        if(auth()->user()->roles->first()->name == 'organisateur'){
+            return redirect('/organisateur');
+        }
         return redirect('/');
     }else{
         return redirect('/signIn');

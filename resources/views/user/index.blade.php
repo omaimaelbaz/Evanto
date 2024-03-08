@@ -40,6 +40,30 @@
   <!--==========================
     Header
   ============================-->
+  {{-- <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+        <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" title=""></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#venue">Venue</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="buy-tickets"><a href="#buy-tickets">Buy Tickets</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header --> --}}
   <header id="header">
     <div class="container">
 
@@ -56,15 +80,16 @@
           <li><a href="#speakers">Speakers</a></li>
           <li><a href="#schedule">Schedule</a></li>
           <li><a href="#venue">Venue</a></li>
-          <li><a href="#hotels">Hotels</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#sponsors">Sponsors</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="signIn" class="login-btn">Login</a></li>
+          <li><a href="/signUp" class="register-btn">Register</a></li>
           <li class="buy-tickets"><a href="#buy-tickets">Buy Tickets</a></li>
+
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
   </header><!-- #header -->
+
 
   <!--==========================
     Intro Section
@@ -570,99 +595,7 @@
     </section>
 
     <!--==========================
-      Hotels Section
-    ============================-->
-    <section id="hotels" class="section-with-bg wow fadeInUp">
 
-      <div class="container">
-        <div class="section-header">
-          <h2>Hotels</h2>
-          <p>Her are some nearby hotels</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="hotel">
-              <div class="hotel-img">
-                <img src="img/hotels/1.jpg" alt="Hotel 1" class="img-fluid">
-              </div>
-              <h3><a href="#">Hotel 1</a></h3>
-              <div class="stars">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <p>0.4 Mile from the Venue</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="hotel">
-              <div class="hotel-img">
-                <img src="img/hotels/2.jpg" alt="Hotel 2" class="img-fluid">
-              </div>
-              <h3><a href="#">Hotel 2</a></h3>
-              <div class="stars">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half-full"></i>
-              </div>
-              <p>0.5 Mile from the Venue</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="hotel">
-              <div class="hotel-img">
-                <img src="img/hotels/3.jpg" alt="Hotel 3" class="img-fluid">
-              </div>
-              <h3><a href="#">Hotel 3</a></h3>
-              <div class="stars">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <p>0.6 Mile from the Venue</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </section>
-
-    <!--==========================
-      Gallery Section
-    ============================-->
-    <section id="gallery" class="wow fadeInUp">
-
-      <div class="container">
-        <div class="section-header">
-          <h2>Gallery</h2>
-          <p>Check our gallery from the recent events</p>
-        </div>
-      </div>
-
-      <div class="owl-carousel gallery-carousel">
-        <a href="img/gallery/1.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/1.jpg" alt=""></a>
-        <a href="img/gallery/2.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/2.jpg" alt=""></a>
-        <a href="img/gallery/3.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/3.jpg" alt=""></a>
-        <a href="img/gallery/4.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/4.jpg" alt=""></a>
-        <a href="img/gallery/5.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/5.jpg" alt=""></a>
-        <a href="img/gallery/6.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/6.jpg" alt=""></a>
-        <a href="img/gallery/7.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/7.jpg" alt=""></a>
-        <a href="img/gallery/8.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/8.jpg" alt=""></a>
-      </div>
-
-    </section>
-
-    <!--==========================
       Sponsors Section
     ============================-->
     <section id="sponsors" class="section-with-bg wow fadeInUp">
