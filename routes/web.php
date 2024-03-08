@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
-
+use App\Http\Controllers\OrganizateurController;
 
 
 
@@ -45,6 +45,13 @@ Route::get('user/{id}', [UserController::class, 'checkStatus']);
 
 // categories table
 Route::get('/category', [CategoryController::class, 'category']);
+
+
+// organizateur
+
+Route::get('/organizateur', [ OrganizateurController::class, 'organizateur']);
+
+
 
 
 
