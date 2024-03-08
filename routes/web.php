@@ -19,9 +19,11 @@ use App\Http\Controllers\OrganizateurController;
 |
 */
 
-Route::get('/', function () {
-    return view('user.index');
-});
+// Route::get('/', function () {
+//     return view('user.index');
+// });
+Route::get('/', [UserController::class, 'index']);
+
 
 Route::get('/admin', function () {
     return view('admin.index');

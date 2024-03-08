@@ -141,22 +141,26 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img src="img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">Brenden Legros</a></h3>
-                <p>Quas alias incidunt</p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
+            @foreach ($events as $event)
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker">
+                  <img src="img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
+                  <div class="details">
+                    <h3><a href="speaker-details.html">{{$event->title}}</a></h3>
+                    <p>{{$event->description}}</p>
+                    <div class="social">
+                      <a href=""><i class="fa fa-twitter"></i></a>
+                      <a href=""><i class="fa fa-facebook"></i></a>
+                      <a href=""><i class="fa fa-google-plus"></i></a>
+                      <a href=""><i class="fa fa-linkedin"></i></a>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
+
+            @endforeach
+
+          {{-- <div class="col-lg-4 col-md-6">
             <div class="speaker">
               <img src="img/speakers/2.jpg" alt="Speaker 2" class="img-fluid">
               <div class="details">
@@ -230,7 +234,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> --}}
         </div>
       </div>
 
