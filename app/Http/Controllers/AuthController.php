@@ -22,9 +22,9 @@ class AuthController extends Controller
         'email' => 'required|email|unique:users',
         'password' => 'required',
         'role'=>'required',
-        // 'status' => 'in:active,inactive,pending'
 
     ]);
+
     // dd($request->all()
     $user = User::create($request->all());
     if($user){
@@ -45,12 +45,29 @@ class AuthController extends Controller
             return redirect('/admin');
         }
         if(auth()->user()->roles->first()->name == 'organisateur'){
-            return redirect('/organisateur');
+            return redirect('/organizateur');
         }
         return redirect('/');
     }else{
         return redirect('/signIn');
     }
 }
+public function logout(){
+    auth()->logout();
+    return redirect('/');
+}
+
+public function getCurrentUserId() {
+    if(auth()->check()) {
+        $user = auth()->user();
+        $userId = $user->id;
+        $userName = $user->name;
+        return "ID: $userId, Name: $userName";
+    } else {
+        return "No one is currently connected.";
+    }
+}
+
+
 }
 

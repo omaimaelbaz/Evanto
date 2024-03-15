@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>TheEvent - Bootstrap Event Template</title>
+  <title>Evento</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -40,30 +40,7 @@
   <!--==========================
     Header
   ============================-->
-  {{-- <header id="header">
-    <div class="container">
 
-      <div id="logo" class="pull-left">
-        <!-- Uncomment below if you prefer to use a text logo -->
-        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
-        <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" title=""></a>
-      </div>
-
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="#intro">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#speakers">Speakers</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#venue">Venue</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#sponsors">Sponsors</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="buy-tickets"><a href="#buy-tickets">Buy Tickets</a></li>
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- #header --> --}}
   <header id="header">
     <div class="container">
 
@@ -77,16 +54,23 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="#intro">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#speakers">Events</a></li>
           <li><a href="#schedule">Schedule</a></li>
           <li><a href="#venue">Venue</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="signIn" class="login-btn">Login</a></li>
           <li><a href="/signUp" class="register-btn">Register</a></li>
           <li class="buy-tickets"><a href="#buy-tickets">Buy Tickets</a></li>
+          <li class="buy-tickets">
+            <a href="/logout" id="logoutLink">Log Out</a>
+        </li>
+
+
+
 
         </ul>
       </nav><!-- #nav-menu-container -->
+
     </div>
   </header><!-- #header -->
 
@@ -133,20 +117,76 @@
     <!--==========================
       Speakers Section
     ============================-->
+
     <section id="speakers" class="wow fadeInUp">
       <div class="container">
         <div class="section-header">
           <h2>Event Speakers</h2>
           <p>Here are some of our speakers</p>
-        </div>
 
-        <div class="row">
+        </div>
+        <div class="container">
+
+                <div class="filter d-flex gap-6 pb-4 ">
+                    <select  id="filter" class="form-control w-25" onchange="filter()" >
+                        <option selected="" disabled="">Filter By</option>
+                        <option value="all">All</option>
+                                            @foreach ($category as $item )
+                                            <option value="{{$item->id}}">{{$item->name}}</option>
+                                            @endforeach
+
+                                        </select>
+                    <div class="w-100 d-flex">
+                        <input type="search" id="search" onkeyup="serach()" class="form-control" placeholder="Search">
+                        <button type="button" class="btn btn-dark" style="border-radius: 0%" data-mdb-ripple-init="">
+                            <svg class="svg-inline--fa fa-magnifying-glass" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"></path></svg><!-- <i class="fas fa-search"></i> Font Awesome fontawesome.com -->
+                        </button>
+                        <script>
+                            function serach()
+                            {
+
+                                var input = document.getElementById("search");
+                                var url = "/searchEvent/" +input.value;
+                                const xhttp = new XMLHttpRequest();
+                                xhttp.onreadystatechange = function() {
+                                        document.getElementById("allEvents").innerHTML = xhttp.responseText;
+
+                                };
+                                xhttp.open("GET",url, true);
+                                xhttp.send();
+                            }
+
+                            function filter()
+                            {
+                                var select = document.getElementById("filter");
+                                var url = "/filter/" +select.value;
+                                const xhttp = new XMLHttpRequest();
+                                xhttp.onreadystatechange = function() {
+                                        document.getElementById("allEvents").innerHTML = xhttp.responseText;
+                                        console.log(xhttp.responseText);
+                                };
+                                xhttp.open("GET",url, true);
+                                xhttp.send();
+
+
+
+
+                            }
+
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+
+
+        <div class="row" id="allEvents">
             @foreach ($events as $event)
             <div class="col-lg-4 col-md-6">
                 <div class="speaker">
                   <img src="img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
                   <div class="details">
-                    <h3><a href="/details">{{$event->title}}</a></h3>
+                    <h3><a href="/details/{{$event->id}}">{{$event->title}}</a></h3>
                     <p>{{$event->description}}</p>
                     <div class="social">
                       <a href=""><i class="fa fa-twitter"></i></a>

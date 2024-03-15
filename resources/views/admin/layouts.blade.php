@@ -118,13 +118,21 @@
 
                           </li>
                           <li class="sidebar-item ">
-                            <a href="/category" class='sidebar-link'>
-                                <i class="bi bi-grid-fill"></i>
-                                <span>Category</span>
-                            </a>
+                                    <a href="/category" class='sidebar-link'>
+                                        <i class="bi bi-grid-fill"></i>
+                                        <span>Category</span>
+                                    </a>
 
 
-                      </li>
+                            </li>
+                            <li class="sidebar-item ">
+                                <a href="/AcceptEventOrganisateur" class='sidebar-link'>
+                                    <i class="bi bi-grid-fill"></i>
+                                    <span>Accept Event</span>
+                                </a>
+
+
+                        </li>
 
                         <ul class="submenu ">
 

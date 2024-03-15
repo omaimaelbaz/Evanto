@@ -1,18 +1,16 @@
-@extends('organizateur.layouts')
+@extends('admin.layouts')
 @section('content')
 <div class="page-heading">
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>Events</h3>
+                <h3>Users</h3>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">EventTable</li>
-                        <li class="breadcrumb-item active" aria-current="page">Reservation</li>
-
+                        <li class="breadcrumb-item active" aria-current="page">CategoryTable</li>
                     </ol>
                 </nav>
             </div>
@@ -23,43 +21,35 @@
             <div class="card-body">
                 <table class="table table-striped" id="table1">
                     <thead>
-                        <a href="/addevent" class="btn btn-primary">Add event</a>
                         <tr>
                             <th>id</th>
-                            <th>title</th>
-                            <th>description</th>
-                            <th>date</th>
-                            <th>location</th>
-                            <th>category</th>
-                            <th>available_seats</th>
+                            <th>Name Event</th>
                             <th>Action</th>
 
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($events as $item)
+                        @foreach ($events as $item )
                         <tr>
                             <td>{{$item->id}}</td>
                             <td>{{$item->title}}</td>
-                            <td>{{$item->description}}</td>
-                            <td>{{$item->date}}</td>
-                            <td>{{$item->location}}</td>
-                            <td>{{$item->category->name}}</td>
-                            <td>{{$item->available_seats}}</td>
                             <td>
-                                <a href="/update/{{$item->id}}" class="btn btn-primary">Update</a>
-                                <a href="/delete/{{$item->id}}" class="btn btn-danger">delete</a>
+                                <a href="/acceptRefuseEvet/accept/{{$item->id}}" class="btn btn-primary">Accept</a>
+                                <a href="/acceptRefuseEvet/refuse/{{$item->id}}" class="btn btn-danger">Refuse</a>
+
                             </td>
                         </tr>
+
                         @endforeach
+
+
                     </tbody>
-
-
                 </table>
             </div>
         </div>
 
     </section>
+    {{$events->links()}}
 
 
 @endsection

@@ -16,18 +16,16 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="{{asset('lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="{{asset('lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/venobox/venobox.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  {{-- <link href="css/style.css" rel="stylesheet"> --}}
-    <link href="{{asset('css/style.css')}}" rel="stylesheet">
-
+  <link href="css/style.css" rel="stylesheet">
 
   <!-- =======================================================
     Theme Name: TheEvent
@@ -48,7 +46,7 @@
       <div id="logo" class="pull-left">
         <!-- Uncomment below if you prefer to use a text logo -->
         <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
-        <a href="/" class="scrollto"><img src="img/logo.png" alt="" title=""></a>
+        <a href="index.html#intro" class="scrollto"><img src="img/logo.png" alt="" title=""></a>
       </div>
 
       <nav id="nav-menu-container">
@@ -69,66 +67,41 @@
   </header><!-- #header -->
 
   <main id="main" class="main-page">
+    <div class="container">
 
-    <!--==========================
-      Speaker Details Section
-    ============================-->
-    <section id="speakers-details" class="">
-      <div class="container">
-        <div class="section-header">
-          <h2>Speaker Details</h2>
-          <p>Praesentium ut qui possimus sapiente nulla.</p>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-              <img src="{{asset('img/speakers/1.jpg')}}" alt="Speaker 1" class="img-fluid">
-            </div>
+    <table class="table table-hover">
 
-            <div class="col-md-6">
-              <div class="details">
-                <h2>{{$events->title}}</h2>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-                <p>Voluptatem perferendis sed assumenda voluptatibus. Laudantium molestiae sint. Doloremque odio dolore dolore sit. Quae labore alias ea omnis ex expedita sapiente molestias atque. Optio voluptas et.</p>
+        <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
 
-                <p>Aboriosam inventore dolorem inventore nam est esse. Aperiam voluptatem nisi molestias laborum ut. Porro dignissimos eum. Tempore dolores minus unde est voluptatum incidunt ut aperiam.</p>
-
-                <p> category :{{$events->category->name}}</p>
-                <p> location :{{$events->location}}</p>
-                <p> available seats :{{$events->available_seats}}</p>
-
-
-
-              </div>
-            </div>
-
-          </div>
-
-
-      </div>
-
-    </section>
-
-    <div class="cta__wrapper aos-init" data-aos="flip-up" data-aos-duration="1000" style="background-image:url(assets/images/cta/bg.png)">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="cta__content">
-                    <h2>Reserve Your Ticket Now</h2>
-                    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="card-body">
-                            <h5 class="card-title">Event Ticket Reservation</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                            <a href="/reservernow/{{$events->id}}" class="btn btn-primary">Reserve Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+
 
 
 
@@ -215,8 +188,7 @@
 
   <!-- JavaScript Libraries -->
   <script src="lib/aos/aos.js"></script>
-<link href="{{asset('lib/aos/aos.css')}}" rel="stylesheet">
-
+<link href="lib/aos/aos.css" rel="stylesheet">
 
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>

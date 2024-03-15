@@ -23,34 +23,26 @@
             <div class="card-body">
                 <table class="table table-striped" id="table1">
                     <thead>
-                        <a href="/addevent" class="btn btn-primary">Add event</a>
                         <tr>
                             <th>id</th>
-                            <th>title</th>
-                            <th>description</th>
-                            <th>date</th>
-                            <th>location</th>
-                            <th>category</th>
-                            <th>available_seats</th>
+                            <th>Event name</th>
+                            <th>Date</th>
                             <th>Action</th>
 
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($events as $item)
-                        <tr>
+                        @foreach ($reservations as $item)
+                         <tr>
                             <td>{{$item->id}}</td>
-                            <td>{{$item->title}}</td>
-                            <td>{{$item->description}}</td>
-                            <td>{{$item->date}}</td>
-                            <td>{{$item->location}}</td>
-                            <td>{{$item->category->name}}</td>
-                            <td>{{$item->available_seats}}</td>
+                            <td>{{$item->event->title}}</td>
+                            <td>{{$item->event->date}}</td>
                             <td>
-                                <a href="/update/{{$item->id}}" class="btn btn-primary">Update</a>
-                                <a href="/delete/{{$item->id}}" class="btn btn-danger">delete</a>
+                                <a href="" class="btn btn-primary">pending</a>
+                                <a href="" class="btn btn-danger">aproved</a>
                             </td>
                         </tr>
+
                         @endforeach
                     </tbody>
 

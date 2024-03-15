@@ -44,8 +44,8 @@
 
                             <select class="form-select form-select-lg" name="role">
 
-                                <option value="2">user</option>
-                                <option value="3">Organizer</option>
+                                <option value="3">user</option>
+                                <option value="2">Organizer</option>
                             </select>
 
                         </div>

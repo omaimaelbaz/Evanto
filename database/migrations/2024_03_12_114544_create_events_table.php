@@ -17,6 +17,12 @@ return new class extends Migration
             $table->text('description');
             $table->date('date');
             $table->string('location');
+            $table->integer('price');
+
+            $table->enum('acceptType', ['auto', 'man']);
+
+
+
             $table->foreignId('category_id')
                   ->constrained('categories_table')
                   ->onDelete('cascade')

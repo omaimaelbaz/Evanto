@@ -99,6 +99,10 @@
                                     <a href="/signUp" class="submenu-link">Register</a>
 
                                 </li>
+                                <li class="submenu-item  ">
+                                    <a href="/logout" class="submenu-link">logout</a>
+
+                                </li>
 
                                 <li class="submenu-item  ">
                                     <a href="/forgotpassword" class="submenu-link">Forgot Password</a>
@@ -117,6 +121,14 @@
 
 
                           </li>
+                          <li class="sidebar-item ">
+                            <a href="/event" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Reservation</span>
+                            </a>
+
+
+                      </li>
 
 
                         <ul class="submenu ">
